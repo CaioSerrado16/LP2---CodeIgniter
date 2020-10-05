@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends MY_Controller {
 
 	public function index()
 	{
@@ -11,8 +11,7 @@ class Welcome extends CI_Controller {
 	public function login(){
 		$this->load->model('LoginModel', 'login');
 		$v['error'] = $this->login->verifica();
-		$this->load->view('common/cabecalho');
-		$this->load->view('access/login_form', $v);
-		$this->load->view('common/rodape');
+		$html = $this->load->view('access/login_form', $v, true);
+		$this->show($html, false);
 	}
 }
