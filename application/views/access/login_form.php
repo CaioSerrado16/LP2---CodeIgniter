@@ -9,16 +9,9 @@
             <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
             <input type="password" id="senha" name="senha" class="form-control mb-4" placeholder="Senha">
 
-            <div class="d-flex justify-content-around">
-                <div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                    </div>
-                </div>
-            </div>
-
             <button class="btn btn-info btn-block my-4" type="submit">Enviar</button>
-
+            <p class="red-text"><?= $error ? 'Dados de acesso incorretos.' : '' ?></p>
         </form>
+
     </div>
 </div>
